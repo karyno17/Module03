@@ -2,9 +2,15 @@
     box-sizing: border-box; 
 }
 
+/* Keep all the page's content above the Watermark Background Image */
+header, h1, aside, article, section, footer {
+    position: relative;
+    z-index: 1;
+}
+
 /* Body formatting */
 body {
-    margin: 0 auto;
+    margin: 0;
     font-family: serif;
     line-height: 1.4;
     color: #111;
@@ -12,51 +18,59 @@ body {
     position: relative;
   }
 
-/* Creates shared centered width placement of text */
-header, aside, h1, article, footer {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 50px;
-    position: relative;
-    z-index: 1;
-}
-
 /* Watermark background image */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     background-image: url("WidgetCoLogo.gif");
-    background-position: center 71%;
+    background-position: center 60%;
     background-repeat: no-repeat;
-    background-size: 52%;
     pointer-events: none;
     z-index: 0;
 }
 
-/* Top header lines */
+/* Header section and lines */
 header {
-    max-width: 85%;
+    margin: 28px 9px 20px;
+    padding: 2px 0;
     text-align: center;
     font-variant: small-caps;
     letter-spacing: .08em;
     font-weight: 500;
     font-size: 20px;
-    margin: 28px auto 20px;
     color: #000000;
-    padding: 2px 0;
-    border-top: 2px solid #c9c9c9;
-    border-bottom: 2px solid #c9c9c9;
+    border-top: 1.5px solid #000000;
+    border-bottom: 1.5px solid #000000;
+    position: relative;
+}
+
+/* Black rectangle to the right of the headline */
+header::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 19px;
+    top: -1px;
+    height: calc(100% + 4px);
+    background: #000000;
+}
+
+/* Purple rectangle to the right of the Press Contanct */
+header::after {
+    content: "";
 }
 
 aside {
     float: right;
     text-align: right;
     width: 240px;
-    padding: 2px 20px 18px 12px;
+    padding: 2px 20px 1px 12px;
     border-right: 19px solid #2d293e;
-    font-size: 17px;
-    margin: -10px 65px 10px 10px;
+    font-size: 16px;
+    margin-top: -20px;
+    margin-right: 9px;
+    padding-top: 5px;
     line-height: 1.2;
 }
 
@@ -67,37 +81,42 @@ aside::first-line {
 
 /* Heading formatting */
 h1 {
-    margin-top: 40px;
-    margin-left: 66px;
-    margin-bottom: 60px;
+    margin: 40px 9px 60px;
     font-size: 40px;
     line-height: 1.1;
     letter-spacing:.02em;
-    padding: 0 30px;
+    padding: 0;
+}
+
+article {
+    margin: 0 88px;
+    padding: 0;
 }
 
 article h2 {
+    clear: right;
     font-style: italic;
     text-align: center;
     font-size: 29px;
     line-height: 1;
-    margin: 20px auto 30px;
+    margin: 20px 0px 30px;
+    padding-top: 40px;
 }
 
 article p {
     margin: 0 0 14px;
     text-align: justify;
+    font-size: 18px;
 }
 
 /* Green box on the left side */
 section {
     position: relative;
+    margin: 18px 0px;
     background: #f7fbe8;
     border: 2px solid #0a7a2a;
     padding: 20px 14px 20px 63px;
-    margin-top: 18px;
     font-size: 15px;
-    max-width: none;
     text-align: justify;
     line-height: 1;
     font-size: 18px;
@@ -125,17 +144,14 @@ a:hover {
 
 /* Footer formatting */
 footer {
-    max-width: 85%;
-    border-top: 2px solid #c9c9c9;
+    border-top: 1.5px solid #a1a0a0;
     text-align: right;
     font-size: 14px;
-    color: #c9c9c9;
-    padding-top: 8px;
-    margin: 26px auto 48px;
+    color: #a1a0a0;
+    padding-top: 9px;
+    margin: 26px 9px 48px;
     font-style: italic;
-    padding-right: 0;
-    padding-top: 8px;
-    padding-left: 50px;
+    padding-top: 9px;
 }
 
 footer a:link {
