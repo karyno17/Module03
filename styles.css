@@ -66,7 +66,7 @@ aside {
     text-align: right;
     width: 240px;
     padding: 2px 20px 1px 12px;
-    border-right: 19px solid #2d293e;
+    border-right: 19px solid #45568a;
     font-size: 16px;
     margin-top: -20px;
     margin-right: 9px;
@@ -109,12 +109,12 @@ article p {
     font-size: 18px;
 }
 
-/* Green box on the left side */
+/* Previous green -now purple- box on the left side */
 section {
     position: relative;
     margin: 18px 0px;
-    background: #f7fbe8;
-    border: 2px solid #0a7a2a;
+    background: #f6ebfb;
+    border: 2px solid #8f5fa6;
     padding: 20px 14px 20px 63px;
     font-size: 15px;
     text-align: justify;
@@ -129,7 +129,7 @@ section::before {
     left: 0;
     width: 45px;
     height: 100%;
-    background: #0a7a2a;
+    background: #8f5fa6;
 }
 
 /* Link formatting */
